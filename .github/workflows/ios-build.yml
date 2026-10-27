@@ -1,0 +1,63 @@
+name: iOS Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build with Xcode 27
+    runs-on: xcode-27
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks
+          swift --version
+
+      - name: Run core checks
+        run: |
+          swiftc -module-cache-path "$RUNNER_TEMP/swift-cache" \
+            Sources/MagpieCore/*.swift scripts/CoreChecks.swift \
+            -o "$RUNNER_TEMP/magpie-core-checks"
+          "$RUNNER_TEMP/magpie-core-checks"
+
+      - name: Run package tests
+        run: swift test
+
+      - name: Build simulator app
+        run: |
+          xcodebuild \
+            -project MagpiePocket.xcodeproj \
+            -scheme MagpiePocket \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Package simulator app
+        run: |
+          ditto -c -k --sequesterRsrc --keepParent \
+            "$RUNNER_TEMP/DerivedData/Build/Products/Debug-iphonesimulator/MagpiePocket.app" \
+            "$RUNNER_TEMP/MagpiePocket-simulator.zip"
+
+      - name: Upload simulator app
+        uses: actions/upload-artifact@v4
+        with:
+          name: MagpiePocket-simulator
+          path: ${{ runner.temp }}/MagpiePocket-simulator.zip
+          if-no-files-found: error
+          retention-days: 7

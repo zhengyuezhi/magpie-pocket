@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00FB48CDEDC58588F31C3581 /* ChatState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384622CA25504505DBD5179 /* ChatState.swift */; };
+		2C21CB179DCB96852639EEA5 /* MagpiePocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162142BA3F10D6AD5B6C8E17 /* MagpiePocketApp.swift */; };
+		315EAE402084C84F07A4F123 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6098779DB16ED5F488C1CD9D /* SettingsView.swift */; };
+		4D39A49BF0AD7C7945DA293D /* MagpieCore in Frameworks */ = {isa = PBXBuildFile; productRef = DE10FEC5A537BAF5A403EF6C /* MagpieCore */; };
+		B31FE71675D257DC6AC9A695 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE56141261399B3363D39FC /* ContentView.swift */; };
+		D00C299180ED3AEAD1244A1D /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E232E217E1488298C3792F /* KeychainStore.swift */; };
+		D23D34D8A5DC5885BBBDDE19 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E730343C6C499EDC112C1A2E /* PrivacyInfo.xcprivacy */; };
+		DA8642620260105D6E9D858A /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389045B9F33D1A186C8FE2E3 /* AppSettings.swift */; };
+		E12F9185E854A2BB5FEEC495 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CADC834A8DA39D251B57C2 /* MessageView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		162142BA3F10D6AD5B6C8E17 /* MagpiePocketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagpiePocketApp.swift; sourceTree = "<group>"; };
+		3384622CA25504505DBD5179 /* ChatState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatState.swift; sourceTree = "<group>"; };
+		384C9657C9CFA70EE9757247 /* MagpiePocket.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MagpiePocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		389045B9F33D1A186C8FE2E3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		3CE56141261399B3363D39FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		46CADC834A8DA39D251B57C2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		6098779DB16ED5F488C1CD9D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		72E232E217E1488298C3792F /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		B7E50E05DABA70981CCD7BF2 /* magpie-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "magpie-ios"; path = .; sourceTree = SOURCE_ROOT; };
+		CFF347312ED19AE430F02C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E730343C6C499EDC112C1A2E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CADBB6A568C32194BD1F7B9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D39A49BF0AD7C7945DA293D /* MagpieCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CA71957007DEEE086A6F744 = {
+			isa = PBXGroup;
+			children = (
+				F0E4A6C9C5BC039D445657F5 /* App */,
+				225924569FE71CE60381D136 /* Packages */,
+				99A172B9BBF48FE052C31C2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		225924569FE71CE60381D136 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B7E50E05DABA70981CCD7BF2 /* magpie-ios */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		99A172B9BBF48FE052C31C2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				384C9657C9CFA70EE9757247 /* MagpiePocket.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0E4A6C9C5BC039D445657F5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				389045B9F33D1A186C8FE2E3 /* AppSettings.swift */,
+				3384622CA25504505DBD5179 /* ChatState.swift */,
+				3CE56141261399B3363D39FC /* ContentView.swift */,
+				CFF347312ED19AE430F02C9C /* Info.plist */,
+				72E232E217E1488298C3792F /* KeychainStore.swift */,
+				162142BA3F10D6AD5B6C8E17 /* MagpiePocketApp.swift */,
+				46CADC834A8DA39D251B57C2 /* MessageView.swift */,
+				E730343C6C499EDC112C1A2E /* PrivacyInfo.xcprivacy */,
+				6098779DB16ED5F488C1CD9D /* SettingsView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A5FF1E66BA4855A94707DB2 /* MagpiePocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34975EAC2647B3AEF96C9114 /* Build configuration list for PBXNativeTarget "MagpiePocket" */;
+			buildPhases = (
+				8C3B049810EDB4FA4F9F9B59 /* Sources */,
+				16962122302266BB63C1FD11 /* Resources */,
+				CADBB6A568C32194BD1F7B9B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagpiePocket;
+			packageProductDependencies = (
+				DE10FEC5A537BAF5A403EF6C /* MagpieCore */,
+			);
+			productName = MagpiePocket;
+			productReference = 384C9657C9CFA70EE9757247 /* MagpiePocket.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F70D4346849609B8D208182 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					9A5FF1E66BA4855A94707DB2 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1C41540127EDE0380A211C70 /* Build configuration list for PBXProject "MagpiePocket" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 1CA71957007DEEE086A6F744;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FCF18F2129615C4334E2687D /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 99A172B9BBF48FE052C31C2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A5FF1E66BA4855A94707DB2 /* MagpiePocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16962122302266BB63C1FD11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23D34D8A5DC5885BBBDDE19 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C3B049810EDB4FA4F9F9B59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8642620260105D6E9D858A /* AppSettings.swift in Sources */,
+				00FB48CDEDC58588F31C3581 /* ChatState.swift in Sources */,
+				B31FE71675D257DC6AC9A695 /* ContentView.swift in Sources */,
+				D00C299180ED3AEAD1244A1D /* KeychainStore.swift in Sources */,
+				2C21CB179DCB96852639EEA5 /* MagpiePocketApp.swift in Sources */,
+				E12F9185E854A2BB5FEEC495 /* MessageView.swift in Sources */,
+				315EAE402084C84F07A4F123 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		497DC35F44E5F7B8CABC1654 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6114997A1D7AB30789C925A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.magpiepocket.client;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA795B9A7FB9659866FF4AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.magpiepocket.client;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F0CF8F00B4D21E183A23998C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C41540127EDE0380A211C70 /* Build configuration list for PBXProject "MagpiePocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497DC35F44E5F7B8CABC1654 /* Debug */,
+				F0CF8F00B4D21E183A23998C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		34975EAC2647B3AEF96C9114 /* Build configuration list for PBXNativeTarget "MagpiePocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6114997A1D7AB30789C925A3 /* Debug */,
+				BA795B9A7FB9659866FF4AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		FCF18F2129615C4334E2687D /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE10FEC5A537BAF5A403EF6C /* MagpieCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MagpieCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4F70D4346849609B8D208182 /* Project object */;
+}
