@@ -11,7 +11,8 @@ Magpie Pocket 是一个独立、非官方的 Magpie 远程伴侣 App。它连接
 ## 系统与构建要求
 
 - 最低系统版本为 iOS 17。
-- 对 iOS 27 的兼容性是预期目标，但目前 **UNVERIFIED（尚未验证）**。本说明不声称已在 iOS 27 上测试，也不声称 Xcode 27 已安装。
+- GitHub Actions 已使用 **Xcode 27.1 / iOS Simulator 27.1 SDK** 成功编译，并通过 XCTest 与核心检查；真机、交互和 iOS 27 运行时回归仍 **UNVERIFIED（尚未验证）**。
+- 本机是 macOS 15.5，未安装完整 Xcode；云端构建不需要本机 Xcode。
 - 需要在 macOS 上使用较新的完整 Xcode，并安装目标设备系统版本对应的 SDK。仅有 Command Line Tools 不足以构建或运行 iOS App。
 - Windows 无法在本地编译原生 iOS App；需要在 macOS + Xcode 环境中构建。
 - 仓库不包含真实私有域名、网关密钥或已签名 IPA。是否能够安装到真机取决于你自己的 Apple 开发者 Team、证书与描述文件配置。
@@ -77,13 +78,13 @@ Privacy Manifest 声明：不进行跟踪，不声明由开发者收集数据；
 swiftc -module-cache-path /private/tmp/magpie-swift-cache Sources/MagpieCore/*.swift scripts/CoreChecks.swift -o /private/tmp/magpie-core-checks && /private/tmp/magpie-core-checks
 ```
 
-运行 XCTest 需要完整 Xcode：
+本地运行 XCTest 需要完整 Xcode：
 
 ```sh
 swift test
 ```
 
-当前验证环境只有 Command Line Tools，无法提供 XCTest 运行结果；这不等同于仓库没有测试源码。提交前应在完整 Xcode 环境运行 `swift test`，并补跑 iOS 构建命令。
+当前验证环境只有 Command Line Tools；云端 Xcode 27.1 已在 GitHub Actions 中运行 `swift test` 与 iOS Simulator 构建，详见 [VALIDATION.md](VALIDATION.md)。
 
 ## 手工验收清单
 
@@ -96,4 +97,4 @@ swift test
 - iPad：分栏布局、横竖屏和键盘输入可用，设置页可正常关闭。
 - 数据安全：损坏或不支持 schema 的历史文件不会被覆盖；反复保存后目录只保留完整的最新文档。
 - 无障碍：VoiceOver 能读出发送、停止、设置、重命名和删除等控件；较大动态字体下主要操作仍可触达。
-- iOS 27：在具备对应 Xcode/SDK 和真机的环境中完成上述回归；在此之前保持 **UNVERIFIED** 结论。
+- iOS 27：云端已用 iOS 27.1 SDK 编译；仍需在真机完成上述交互、签名和运行时回归。产物是**模拟器 App**，不是可安装到 iPhone 的签名 IPA。

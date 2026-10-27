@@ -20,13 +20,14 @@ Date: 2026-10-26
 
 ## Not verified
 
-- The full iOS application has NOT been compiled or run. This Mac has Command
-  Line Tools, but no full Xcode installation or iOS SDK.
-- XCTest could not run because this toolchain lacks the XCTest module. The
-  executable checks are useful but are not a substitute for the entire test suite.
-- iOS 27 compatibility, simulator screenshots, accessibility, iPhone/iPad
-  navigation, background/lock transitions, and real-device storage protection
-  still need verification with a suitable SDK and device/runtime.
+- GitHub Actions run 40439160370 compiled the application with Xcode 27.1
+  against the iOS Simulator 27.1 SDK. Core checks and the full XCTest suite passed.
+- The build produced an unsigned simulator `.app`, not a device-installable IPA.
+- Local XCTest could not run because this Mac's Command Line Tools lack XCTest;
+  the GitHub Actions run supplies that verification instead.
+- iOS 27 simulator compilation is verified. Simulator screenshots, accessibility,
+  iPhone/iPad navigation, background/lock transitions, real-device storage
+  protection and signed-device installation still need runtime verification.
 - No signed IPA, TestFlight upload, App Store submission or signing setup exists.
 - The final Swift client was tested with local mock HTTP fixtures, not against
   a production account. Earlier gateway probing is not an end-to-end app test.
@@ -39,4 +40,5 @@ runtime. Model selection uses a menu; catalog search and app artwork are deferre
 The deployment target remains iOS 17. Raising it to 27 would not prove compatibility.
 
 Follow README.md for build commands and the manual acceptance checklist before
-claiming a supported iOS 27 release.
+claiming a supported iOS 27 release. A free Apple personal team can sign the
+project for a seven-day device install when its Apple account is eligible.
