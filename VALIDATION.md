@@ -23,6 +23,8 @@ Date: 2026-10-26
 - GitHub Actions run 40439160370 compiled the application with Xcode 27.1
   against the iOS Simulator 27.1 SDK. Core checks and the full XCTest suite passed.
 - The build produced an unsigned simulator `.app`, not a device-installable IPA.
+- The workflow also builds an unsigned arm64 device `.ipa` for local re-signing.
+  It contains no certificate, provisioning profile, or Apple account credential.
 - The workflow boots an available iPhone simulator, launches the app, and uploads
   a home-screen screenshot for visual inspection.
 - Local XCTest could not run because this Mac's Command Line Tools lack XCTest;
@@ -31,6 +33,8 @@ Date: 2026-10-26
   iPhone/iPad navigation, background/lock transitions, real-device storage
   protection and signed-device installation still need runtime verification.
 - No signed IPA, TestFlight upload, App Store submission or signing setup exists.
+- Windows-side re-signing, installation, Developer Mode, trust prompts, device
+  launch and iOS 27 runtime behavior remain unverified.
 - The final Swift client was tested with local mock HTTP fixtures, not against
   a production account. Earlier gateway probing is not an end-to-end app test.
 

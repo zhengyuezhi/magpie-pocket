@@ -40,6 +40,20 @@ xcodebuild -project MagpiePocket.xcodeproj -scheme MagpiePocket -destination 'ge
 
 该命令不生成已签名安装包，也不能证明真机安装或 App Store 分发可用。
 
+## 在 Windows 安装到 iPhone
+
+GitHub Actions 会生成一个未签名的 `MagpiePocket-unsigned.ipa`。该文件本身不能直接安装，必须由你自己的 Apple 账号在本机签名；不要把 Apple ID 密码提交到仓库或发给其他人。
+
+1. 从最新成功的 Actions 运行中下载 `MagpiePocket-unsigned-ipa` 并解压。
+2. 在 Windows 安装 Apple 官方来源的 iTunes，以及可信的签名工具，例如 [Sideloadly](https://sideloadly.io/)；只从工具官网下载。
+3. 用数据线连接 iPhone，解锁并选择“信任此电脑”。
+4. 将 `MagpiePocket-unsigned.ipa` 拖入 Sideloadly，输入你自己的 Apple ID 完成本地签名和安装。
+5. 如果 iPhone 提示未受信任，前往“设置 > 通用 > VPN 与设备管理”信任对应开发者；如系统要求，再开启“设置 > 隐私与安全性 > 开发者模式”并重启。
+
+免费 Apple 账号签名的 App 通常 7 天后失效，需要重新签名；首次部署、可安装 App 数量等还受 Apple 的个人团队限制。加入付费 Apple Developer Program 后可改用 TestFlight、Ad Hoc 或 App Store 分发。
+
+`MagpiePocket-simulator.zip` 只包含模拟器 App，不能安装到 iPhone。云端生成的未签名 IPA 也不能绕过 Apple 的签名校验。
+
 ## 配置网关
 
 1. 在 Mac、服务器或 NAS 上启动 Magpie 网关，并保持它在线。手机端 App 不能代替网关进程。
@@ -98,3 +112,4 @@ swift test
 - 数据安全：损坏或不支持 schema 的历史文件不会被覆盖；反复保存后目录只保留完整的最新文档。
 - 无障碍：VoiceOver 能读出发送、停止、设置、重命名和删除等控件；较大动态字体下主要操作仍可触达。
 - iOS 27：云端已用 iOS 27.1 SDK 编译；仍需在真机完成上述交互、签名和运行时回归。产物是**模拟器 App**，不是可安装到 iPhone 的签名 IPA。
+- 真机安装：仓库上传的是未签名 device IPA，仅用于由设备所有者使用自己的 Apple 账号在本机完成签名；仓库不包含证书、描述文件或 Apple ID 凭据。
