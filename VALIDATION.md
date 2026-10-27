@@ -23,6 +23,8 @@ Date: 2026-10-26
 - GitHub Actions run 40439160370 compiled the application with Xcode 27.1
   against the iOS Simulator 27.1 SDK. Core checks and the full XCTest suite passed.
 - The build produced an unsigned simulator `.app`, not a device-installable IPA.
+- The workflow boots an available iPhone simulator, launches the app, and uploads
+  a home-screen screenshot for visual inspection.
 - Local XCTest could not run because this Mac's Command Line Tools lack XCTest;
   the GitHub Actions run supplies that verification instead.
 - iOS 27 simulator compilation is verified. Simulator screenshots, accessibility,

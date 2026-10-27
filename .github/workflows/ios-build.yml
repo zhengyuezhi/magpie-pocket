@@ -54,10 +54,30 @@ jobs:
             "$RUNNER_TEMP/DerivedData/Build/Products/Debug-iphonesimulator/MagpiePocket.app" \
             "$RUNNER_TEMP/MagpiePocket-simulator.zip"
 
+      - name: Capture simulator screenshot
+        run: |
+          set -euo pipefail
+          DEVICE_UDID="$(xcrun simctl list devices available -j | python3 -c 'import json,sys; groups=json.load(sys.stdin)["devices"].values(); print(next(d["udid"] for group in groups for d in group if d["isAvailable"] and d["name"].startswith("iPhone")))')"
+          xcrun simctl boot "$DEVICE_UDID"
+          xcrun simctl bootstatus "$DEVICE_UDID" -b
+          xcrun simctl install "$DEVICE_UDID" \
+            "$RUNNER_TEMP/DerivedData/Build/Products/Debug-iphonesimulator/MagpiePocket.app"
+          xcrun simctl launch "$DEVICE_UDID" dev.magpiepocket.client --screenshot-mode
+          sleep 5
+          xcrun simctl io "$DEVICE_UDID" screenshot "$RUNNER_TEMP/MagpiePocket-home.png"
+
       - name: Upload simulator app
         uses: actions/upload-artifact@v4
         with:
           name: MagpiePocket-simulator
           path: ${{ runner.temp }}/MagpiePocket-simulator.zip
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Upload simulator screenshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: MagpiePocket-screenshot
+          path: ${{ runner.temp }}/MagpiePocket-home.png
           if-no-files-found: error
           retention-days: 7

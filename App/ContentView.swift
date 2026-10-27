@@ -92,7 +92,8 @@ struct ContentView: View {
             state.clearAvailableModels()
         }
         .task {
-            if !settings.hasKey { showingSettings = true }
+            let screenshotMode = ProcessInfo.processInfo.arguments.contains("--screenshot-mode")
+            if !settings.hasKey && !screenshotMode { showingSettings = true }
         }
     }
 
