@@ -6,3 +6,6 @@ xcuserdata/
 .DS_Store
 *.ipa
 *.xcarchive
+
+# Local build outputs
+build-artifacts/
