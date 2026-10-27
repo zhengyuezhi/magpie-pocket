@@ -54,6 +54,8 @@ GitHub Actions 会生成一个未签名的 `MagpiePocket-unsigned.ipa`。该文�
 
 `MagpiePocket-simulator.zip` 只包含模拟器 App，不能安装到 iPhone。云端生成的未签名 IPA 也不能绕过 Apple 的签名校验。
 
+逐项操作步骤见 [WINDOWS_INSTALL.md](WINDOWS_INSTALL.md)。
+
 ## 配置网关
 
 1. 在 Mac、服务器或 NAS 上启动 Magpie 网关，并保持它在线。手机端 App 不能代替网关进程。
